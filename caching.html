@@ -1,0 +1,531 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Caching · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sharding.html" />
+    
+    
+    <link rel="prev" href="load-balancing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="key-characteristics.html">
+            
+                <a href="key-characteristics.html">
+            
+                    
+                    Key Characterics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="load-balancing.html">
+            
+                <a href="load-balancing.html">
+            
+                    
+                    Loading balancing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="caching.html">
+            
+                <a href="caching.html">
+            
+                    
+                    Caching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="sharding.html">
+            
+                <a href="sharding.html">
+            
+                    
+                    Sharding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="indexes.html">
+            
+                <a href="indexes.html">
+            
+                    
+                    Indexes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="proxies.html">
+            
+                <a href="proxies.html">
+            
+                    
+                    Proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="redundancy.html">
+            
+                <a href="redundancy.html">
+            
+                    
+                    Redundancy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="sql-vs-nosql.html">
+            
+                <a href="sql-vs-nosql.html">
+            
+                    
+                    SQL vs. NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="cap-theorem.html">
+            
+                <a href="cap-theorem.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="consistent-hashing.html">
+            
+                <a href="consistent-hashing.html">
+            
+                    
+                    Consistent Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="client-server-communication.html">
+            
+                <a href="client-server-communication.html">
+            
+                    
+                    Client Server Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Caching</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="caching"><a name="caching" class="plugin-anchor" href="#caching"><i class="fa fa-link" aria-hidden="true"></i></a>Caching</h1>
+<ul>
+<li>Take advantage of the locality of reference principle: recently requested data is likely to be requested again.</li>
+<li>Exist at all levels in architecture, but often found at the level nearest to the front end.</li>
+</ul>
+<h2 id="application-server-cache"><a name="application-server-cache" class="plugin-anchor" href="#application-server-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Application server cache</h2>
+<ul>
+<li>Cache placed on a request layer node.</li>
+<li>When a request layer node is expanded to many nodes<ul>
+<li>Load balancer randomly distributes requests across the nodes.</li>
+<li>The same request can go to different nodes.</li>
+<li>Increase cache misses.</li>
+<li>Solutions:<ul>
+<li>Global caches</li>
+<li>Distributed caches</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="distributed-cache"><a name="distributed-cache" class="plugin-anchor" href="#distributed-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Distributed cache</h2>
+<ul>
+<li>Each request layer node owns part of the cached data.</li>
+<li>Entire cache is divided up using a consistent hashing function.</li>
+<li>Pro<ul>
+<li>Cache space can be increased easily by adding more nodes to the request pool.</li>
+</ul>
+</li>
+<li>Con<ul>
+<li>A missing node leads to cache lost.</li>
+</ul>
+</li>
+</ul>
+<h2 id="global-cache"><a name="global-cache" class="plugin-anchor" href="#global-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Global cache</h2>
+<ul>
+<li>A server or file store that is faster than original store, and accessible by all request layer nodes.</li>
+<li>Two common forms<ul>
+<li>Cache server handles cache miss.<ul>
+<li>Used by most applications.</li>
+</ul>
+</li>
+<li>Request nodes handle cache miss.<ul>
+<li>Have a large percentage of the hot data set in the cache.</li>
+<li>An architecture where the files stored in the cache are static and shouldn&#x2019;t be evicted.</li>
+<li>The application logic understands the eviction strategy or hot spots better than the cache</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="content-distributed-network-cdn"><a name="content-distributed-network-cdn" class="plugin-anchor" href="#content-distributed-network-cdn"><i class="fa fa-link" aria-hidden="true"></i></a>Content distributed network (CDN)</h2>
+<ul>
+<li>For sites serving large amounts of static media.</li>
+<li>Process<ul>
+<li>A request first asks the CDN for a piece of static media.</li>
+<li>CDN serves that content if it has it locally available.</li>
+<li>If content isn&#x2019;t available, CDN will query back-end servers for the file, cache it locally and serve it to the requesting user.</li>
+</ul>
+</li>
+<li>If the system is not large enough for CDN, it can be built like this:<ul>
+<li>Serving static media off a separate subdomain using lightweight HTTP server (e.g. Nginx).</li>
+<li>Cutover the DNS from this subdomain to a CDN later.</li>
+</ul>
+</li>
+</ul>
+<h2 id="cache-invalidation"><a name="cache-invalidation" class="plugin-anchor" href="#cache-invalidation"><i class="fa fa-link" aria-hidden="true"></i></a>Cache invalidation</h2>
+<ul>
+<li>Keep cache coherent with the source of truth. Invalidate cache when source of truth has changed.</li>
+<li>Write-through cache<ul>
+<li>Data is written into the cache and permanent storage at the same time.</li>
+<li>Pro<ul>
+<li>Fast retrieval, complete data consistency, robust to system disruptions.</li>
+</ul>
+</li>
+<li>Con<ul>
+<li>Higher latency for write operations.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Write-around cache<ul>
+<li>Data is written to permanent storage, not cache.</li>
+<li>Pro<ul>
+<li>Reduce the cache that is no used.</li>
+</ul>
+</li>
+<li>Con<ul>
+<li>Query for recently written data creates a cache miss and higher latency.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Write-back cache<ul>
+<li>Data is only written to cache.</li>
+<li>Write to the permanent storage is done later on.</li>
+<li>Pro<ul>
+<li>Low latency, high throughput for write-intensive applications.</li>
+</ul>
+</li>
+<li>Con<ul>
+<li>Risk of data loss in case of system disruptions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="cache-eviction-policies"><a name="cache-eviction-policies" class="plugin-anchor" href="#cache-eviction-policies"><i class="fa fa-link" aria-hidden="true"></i></a>Cache eviction policies</h2>
+<ul>
+<li>FIFO: first in first out</li>
+<li>LIFE: last in first out</li>
+<li>LRU: least recently used</li>
+<li>MRU: most recently used</li>
+<li>LFU: least frequently used</li>
+<li>RR: random replacement</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="load-balancing.html" class="navigation navigation-prev " aria-label="Previous page: Loading balancing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sharding.html" class="navigation navigation-next " aria-label="Next page: Sharding">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Caching","level":"1.2.3","depth":2,"next":{"title":"Sharding","level":"1.2.4","depth":2,"path":"sharding.md","ref":"sharding.md","articles":[]},"previous":{"title":"Loading balancing","level":"1.2.2","depth":2,"path":"load-balancing.md","ref":"load-balancing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/grokking-system-design"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"caching.md","mtime":"2019-01-05T00:20:35.737Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-05T00:23:26.875Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
