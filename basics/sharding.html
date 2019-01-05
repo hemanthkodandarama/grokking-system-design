@@ -1,0 +1,506 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Sharding · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="indexes.html" />
+    
+    
+    <link rel="prev" href="caching.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="key-characteristics.html">
+            
+                <a href="key-characteristics.html">
+            
+                    
+                    Key Characterics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="load-balancing.html">
+            
+                <a href="load-balancing.html">
+            
+                    
+                    Loading balancing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="caching.html">
+            
+                <a href="caching.html">
+            
+                    
+                    Caching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="sharding.html">
+            
+                <a href="sharding.html">
+            
+                    
+                    Sharding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="indexes.html">
+            
+                <a href="indexes.html">
+            
+                    
+                    Indexes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="proxies.html">
+            
+                <a href="proxies.html">
+            
+                    
+                    Proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="redundancy.html">
+            
+                <a href="redundancy.html">
+            
+                    
+                    Redundancy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="sql-vs-nosql.html">
+            
+                <a href="sql-vs-nosql.html">
+            
+                    
+                    SQL vs. NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="cap-theorem.html">
+            
+                <a href="cap-theorem.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="consistent-hashing.html">
+            
+                <a href="consistent-hashing.html">
+            
+                    
+                    Consistent Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="client-server-communication.html">
+            
+                <a href="client-server-communication.html">
+            
+                    
+                    Client Server Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Sharding</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sharding--data-partitioning"><a name="sharding--data-partitioning" class="plugin-anchor" href="#sharding--data-partitioning"><i class="fa fa-link" aria-hidden="true"></i></a>Sharding / Data Partitioning</h1>
+<h2 id="partitioning-methods"><a name="partitioning-methods" class="plugin-anchor" href="#partitioning-methods"><i class="fa fa-link" aria-hidden="true"></i></a>Partitioning methods</h2>
+<ul>
+<li>Horizontal partitioning<ul>
+<li>Range based sharding.</li>
+<li>Put different rows into different tables.</li>
+<li>Con<ul>
+<li>If the value whose range is used for sharding isn&#x2019;t chosen carefully, the partitioning scheme will lead to unbalanced servers.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Vertical partitioning<ul>
+<li>Divide data for a specific feature to their own server.</li>
+<li>Pro<ul>
+<li>Straightforward to implement.</li>
+<li>Low impact on the application.</li>
+</ul>
+</li>
+<li>Con<ul>
+<li>To support growth of the application, a database may need further partitioning.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Directory-based partitioning<ul>
+<li>A lookup service that knows the partitioning scheme and abstracts it away from the database access code.</li>
+<li>Allow addition of db servers or change of partitioning schema without impacting application.</li>
+<li>Con<ul>
+<li>Can be a single point of failure.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="partitioning-criteria"><a name="partitioning-criteria" class="plugin-anchor" href="#partitioning-criteria"><i class="fa fa-link" aria-hidden="true"></i></a>Partitioning criteria</h2>
+<ul>
+<li>Key or hash-based partitioning<ul>
+<li>Apply a hash function to some key attribute of the entry to get the partition number.</li>
+<li>Problem<ul>
+<li>Adding new servers may require changing the hash function, which would need redistribution of data and downtime for the service.</li>
+<li>Workaround: <a href="https://en.wikipedia.org/wiki/Consistent_hashing" target="_blank">consistent hashing</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>List partitioning<ul>
+<li>Each partition is assigned a list of values.</li>
+</ul>
+</li>
+<li>Round-robin partitioning<ul>
+<li>With <code>n</code> partitions, the <code>i</code> tuple is assigned to partition <code>i % n</code>.</li>
+</ul>
+</li>
+<li>Composite partitioning<ul>
+<li>Combine any of above partitioning schemes to devise a new scheme.</li>
+<li>Consistent hashing is a composite of hash and list partitioning.<ul>
+<li>Key -&gt; reduced key space through hash -&gt; list -&gt; partition.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="common-problems-of-sharding"><a name="common-problems-of-sharding" class="plugin-anchor" href="#common-problems-of-sharding"><i class="fa fa-link" aria-hidden="true"></i></a>Common problems of sharding</h2>
+<p>Most of the constraints are due to the fact that operations across multiple tables or multiple rows in the same table will no longer run on the same server.</p>
+<ul>
+<li>Joins and denormalization<ul>
+<li>Joins will not be performance efficient since data has to be compiled from multiple servers.</li>
+<li>Workaround: denormalize the database so that queries can be performed from a single table. But this can lead to data inconsistency.</li>
+</ul>
+</li>
+<li>Referential integrity<ul>
+<li>Difficult to enforce data integrity constraints (e.g. foreign keys).</li>
+<li>Workaround<ul>
+<li>Referential integrity is enforced by application code.</li>
+<li>Applications can run SQL jobs to clean up dangling references.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rebalancing<ul>
+<li>Necessity of rebalancing<ul>
+<li>Data distribution is not uniform.</li>
+<li>A lot of load on one shard.</li>
+</ul>
+</li>
+<li>Create more db shards or rebalance existing shards changes partitioning scheme and requires data movement.</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="caching.html" class="navigation navigation-prev " aria-label="Previous page: Caching">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="indexes.html" class="navigation navigation-next " aria-label="Next page: Indexes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sharding","level":"1.2.4","depth":2,"next":{"title":"Indexes","level":"1.2.5","depth":2,"path":"basics/indexes.md","ref":"basics/indexes.md","articles":[]},"previous":{"title":"Caching","level":"1.2.3","depth":2,"path":"basics/caching.md","ref":"basics/caching.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/grokking-system-design"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/sharding.md","mtime":"2019-01-05T00:20:35.742Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-05T00:28:10.896Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

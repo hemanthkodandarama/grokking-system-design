@@ -1,0 +1,459 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Client Server Communication · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="consistent-hashing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="key-characteristics.html">
+            
+                <a href="key-characteristics.html">
+            
+                    
+                    Key Characterics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="load-balancing.html">
+            
+                <a href="load-balancing.html">
+            
+                    
+                    Loading balancing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="caching.html">
+            
+                <a href="caching.html">
+            
+                    
+                    Caching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="sharding.html">
+            
+                <a href="sharding.html">
+            
+                    
+                    Sharding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="indexes.html">
+            
+                <a href="indexes.html">
+            
+                    
+                    Indexes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="proxies.html">
+            
+                <a href="proxies.html">
+            
+                    
+                    Proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="redundancy.html">
+            
+                <a href="redundancy.html">
+            
+                    
+                    Redundancy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="sql-vs-nosql.html">
+            
+                <a href="sql-vs-nosql.html">
+            
+                    
+                    SQL vs. NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="cap-theorem.html">
+            
+                <a href="cap-theorem.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="consistent-hashing.html">
+            
+                <a href="consistent-hashing.html">
+            
+                    
+                    Consistent Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.12" data-path="client-server-communication.html">
+            
+                <a href="client-server-communication.html">
+            
+                    
+                    Client Server Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Client Server Communication</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="client-server-communication"><a name="client-server-communication" class="plugin-anchor" href="#client-server-communication"><i class="fa fa-link" aria-hidden="true"></i></a>Client-Server Communication</h1>
+<h2 id="standard-http-web-request"><a name="standard-http-web-request" class="plugin-anchor" href="#standard-http-web-request"><i class="fa fa-link" aria-hidden="true"></i></a>Standard HTTP Web Request</h2>
+<ol>
+<li>Client opens a connection and requests data from server.</li>
+<li>Server calculates the response.</li>
+<li>Server sends the response back to the client on the opened request.</li>
+</ol>
+<h2 id="ajax-polling"><a name="ajax-polling" class="plugin-anchor" href="#ajax-polling"><i class="fa fa-link" aria-hidden="true"></i></a>Ajax Polling</h2>
+<p>The client repeatedly polls (or requests) a server for data, and waits for the server to respond with data. If no data is available, an empty response is returned.</p>
+<ol>
+<li>Client opens a connection and requests data from the server using regular HTTP.</li>
+<li>The requested webpage sends requests to the server at regular intervals (e.g., 0.5 seconds).</li>
+<li>The server calculates the response and sends it back, like regular HTTP traffic.</li>
+<li>Client repeats the above three steps periodically to get updates from the server.</li>
+</ol>
+<p>Problems</p>
+<ul>
+<li>Client has to keep asking the server for any new data.</li>
+<li>A lot of responses are empty, creating HTTP overhead.</li>
+</ul>
+<h2 id="http-long-polling"><a name="http-long-polling" class="plugin-anchor" href="#http-long-polling"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP Long-Polling</h2>
+<p>The client requests information from the server exactly as in normal polling, but with the expectation that the server may not respond immediately.</p>
+<ol>
+<li>The client makes an initial request using regular HTTP and then waits for a response.</li>
+<li>The server delays its response until an update is available, or until a timeout has occurred.</li>
+<li>When an update is available, the server sends a full response to the client.</li>
+<li>The client typically sends a new long-poll request, either immediately upon receiving a response or after a pause to allow an acceptable latency period.</li>
+</ol>
+<p>Each Long-Poll request has a timeout. The client has to reconnect periodically after the connection is closed, due to timeouts.</p>
+<h2 id="websockets"><a name="websockets" class="plugin-anchor" href="#websockets"><i class="fa fa-link" aria-hidden="true"></i></a>WebSockets</h2>
+<ul>
+<li>A persistent full duplex communication channels over a single TCP connection. Both server and client can send data at any time.</li>
+<li>A connection is established through WebSocket handshake.</li>
+<li>Low communication overhead.</li>
+<li>Real-time data transfer.</li>
+</ul>
+<h2 id="server-sent-event-sse"><a name="server-sent-event-sse" class="plugin-anchor" href="#server-sent-event-sse"><i class="fa fa-link" aria-hidden="true"></i></a>Server-Sent Event (SSE)</h2>
+<ol>
+<li>Client requests data from a server using regular HTTP.</li>
+<li>The requested webpage opens a connection to the server.</li>
+<li><p>Server sends the data to the client whenever there&#x2019;s new information available.</p>
+</li>
+<li><p>Use case:</p>
+<ul>
+<li>When real-time traffic from server to client is needed.</li>
+<li>When server generates data in a loop and sends multiple events to client.</li>
+</ul>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="consistent-hashing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Consistent Hashing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Client Server Communication","level":"1.2.12","depth":2,"previous":{"title":"Consistent Hashing","level":"1.2.11","depth":2,"path":"basics/consistent-hashing.md","ref":"basics/consistent-hashing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/grokking-system-design"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/client-server-communication.md","mtime":"2019-01-05T00:20:35.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-05T00:28:10.896Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
