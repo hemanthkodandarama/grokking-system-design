@@ -1,0 +1,839 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Short URL Service · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pastebin.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/key-characteristics.html">
+            
+                <a href="../basics/key-characteristics.html">
+            
+                    
+                    Key Characterics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/load-balancing.html">
+            
+                <a href="../basics/load-balancing.html">
+            
+                    
+                    Loading balancing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/caching.html">
+            
+                <a href="../basics/caching.html">
+            
+                    
+                    Caching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/sharding.html">
+            
+                <a href="../basics/sharding.html">
+            
+                    
+                    Sharding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/indexes.html">
+            
+                <a href="../basics/indexes.html">
+            
+                    
+                    Indexes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/proxies.html">
+            
+                <a href="../basics/proxies.html">
+            
+                    
+                    Proxies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../basics/queues.html">
+            
+                <a href="../basics/queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../basics/redundancy.html">
+            
+                <a href="../basics/redundancy.html">
+            
+                    
+                    Redundancy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../basics/sql-vs-nosql.html">
+            
+                <a href="../basics/sql-vs-nosql.html">
+            
+                    
+                    SQL vs. NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../basics/cap-theorem.html">
+            
+                <a href="../basics/cap-theorem.html">
+            
+                    
+                    CAP Theorem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../basics/consistent-hashing.html">
+            
+                <a href="../basics/consistent-hashing.html">
+            
+                    
+                    Consistent Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../basics/client-server-communication.html">
+            
+                <a href="../basics/client-server-communication.html">
+            
+                    
+                    Client Server Communication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Designs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="short-url.html">
+            
+                <a href="short-url.html">
+            
+                    
+                    Short URL Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="pastebin.html">
+            
+                <a href="pastebin.html">
+            
+                    
+                    Pastebin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="instagram.html">
+            
+                <a href="instagram.html">
+            
+                    
+                    Instagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="dropbox.html">
+            
+                <a href="dropbox.html">
+            
+                    
+                    Dropbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="twitter.html">
+            
+                <a href="twitter.html">
+            
+                    
+                    Twitter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="youtube.html">
+            
+                <a href="youtube.html">
+            
+                    
+                    Youtube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="twitter-search.html">
+            
+                <a href="twitter-search.html">
+            
+                    
+                    Twitter Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="web-crawler.html">
+            
+                <a href="web-crawler.html">
+            
+                    
+                    Web Crawler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="facebook-newsfeed.html">
+            
+                <a href="facebook-newsfeed.html">
+            
+                    
+                    Facebook Newsfeed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="yelp.html">
+            
+                <a href="yelp.html">
+            
+                    
+                    Yelp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="uber-backend.html">
+            
+                <a href="uber-backend.html">
+            
+                    
+                    Uber Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="ticketmaster.html">
+            
+                <a href="ticketmaster.html">
+            
+                    
+                    Ticketmaster
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Short URL Service</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="url-shortening-service"><a name="url-shortening-service" class="plugin-anchor" href="#url-shortening-service"><i class="fa fa-link" aria-hidden="true"></i></a>URL Shortening Service</h1>
+<h2 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h2>
+<p><img src="../img/short-url-overview.png" alt="overview">
+<img src="../img/short-url-detail.png" alt="summary"></p>
+<h2 id="requirements"><a name="requirements" class="plugin-anchor" href="#requirements"><i class="fa fa-link" aria-hidden="true"></i></a>Requirements</h2>
+<ul>
+<li><p>Functional Requirements</p>
+<ul>
+<li>Given a URL, generate a shorter and unique alias (short link).</li>
+<li>When users access a short link, redirect to the original link.</li>
+<li>Users should optionally be able to pick a custom short link for their URL.</li>
+<li>Links will expire after a standard default timespan. Users should also be able to specify the expiration time.</li>
+</ul>
+</li>
+<li><p>Non-Functional Requirements</p>
+<ul>
+<li>The system should be highly available. This is required because, if our service is down, all the URL redirections will start failing.</li>
+<li>URL redirection should happen in real-time with minimal latency.</li>
+<li>Shortened links should not be guessable (not predictable).</li>
+</ul>
+</li>
+<li><p>Extended Requirements</p>
+<ul>
+<li>Analytics; e.g., how many times a redirection happened?</li>
+<li>Be accessible through REST APIs by other services.</li>
+</ul>
+</li>
+</ul>
+<h2 id="capacity-estimation-and-constraints"><a name="capacity-estimation-and-constraints" class="plugin-anchor" href="#capacity-estimation-and-constraints"><i class="fa fa-link" aria-hidden="true"></i></a>Capacity Estimation and Constraints</h2>
+<ul>
+<li><p>Assumption</p>
+<ul>
+<li>Read-heavy. More redirection requests compared to new URL shortenings.</li>
+<li>Assume <strong>100:1</strong> ratio between read and write.</li>
+</ul>
+</li>
+<li><p>Traffic estimates</p>
+<ul>
+<li><strong>500M</strong> new URL shortenings per month, 100 * 500M =&gt; 50B redirections per month.</li>
+<li>New URL shortenings per second<ul>
+<li>500 million / (30 days <em> 24 hours </em> 3600 seconds) = <strong>~200 URLs/s</strong></li>
+</ul>
+</li>
+<li>URLs redirections per second<ul>
+<li>50 billion / (30 days <em> 24 hours </em> 3600 sec) = <strong>~19K/s</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Storage estimates</p>
+<ul>
+<li>Assume storing every URL shortening request for 5 years, each object takes <strong>500 bytes</strong></li>
+<li>Total objects: 500 million <em> 5 years </em> 12 months = <strong>30 billion</strong></li>
+<li>Total storage: 30 billion <em> 500 bytes = <em>*15 TB</em></em></li>
+</ul>
+</li>
+<li><p>Bandwidth estimates</p>
+<ul>
+<li>Write: 200 URL/s <em> 500 bytes/URL = <em>*100 KB/s</em></em></li>
+<li>Read: 19K URL/s <em> 500 bytes/URL = <em>*~9 MB/s</em></em></li>
+</ul>
+</li>
+<li><p>Cache memory estimates</p>
+<ul>
+<li>Follow the 80-20 rule, assuming 20% of URLs generate 80% of traffic, cache 20% hot URLs</li>
+<li>Requests per day: 19K <em> 3600 seconds </em> 24 hours = <strong>~1.7 billion/day</strong></li>
+<li>Cache 20%: 0.2 <em> 1.7 billion </em> 500 bytes = <strong>~170GB</strong></li>
+</ul>
+</li>
+<li><p>Summary</p>
+<ul>
+<li>Assuming 500 million new URLs per month and 100:1 read:write ratio
+Category | Calculation | Estimate
+---- | ---- | ----
+New URLs | 500 million / (30 days <em> 24 hours </em> 3600 seconds) | 200 /s
+URL redirections | 500 million <em> 100 / (30 days </em> 24 hours <em> 3600 seconds) | 19 K/s
+Incoming data | 500 bytes/URL </em> 200 URL/s | 100 KB/s
+Outgoing data | 500 bytes/URL <em> 19K URL/s | 9 MB/s
+Storage for 5 years | 500 bytes/URL </em> 500 million <em> 60 months | 15 TB
+Memory for cache | 19K URL </em> 3600 seconds <em> 24 hours </em> 500 bytes * 20% | 170 GB</li>
+</ul>
+</li>
+</ul>
+<h2 id="system-apis"><a name="system-apis" class="plugin-anchor" href="#system-apis"><i class="fa fa-link" aria-hidden="true"></i></a>System APIs</h2>
+<h3 id="createurl"><a name="createurl" class="plugin-anchor" href="#createurl"><i class="fa fa-link" aria-hidden="true"></i></a><code>createUrl</code></h3>
+<ul>
+<li>Parameters
+Name | Type | Note
+---- | ---- | ----
+<code>api_dev_key</code> | <code>string</code> | The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
+<code>original_url</code> | <code>string</code> | Original URL to be shortened.
+<code>custom_alias</code> | <code>string</code> | Optional custom key for the URL.
+<code>user_name</code> | <code>string</code> | Optional user name to be used in encoding.
+<code>expire_date</code> | <code>string</code> | Optional expiration date for the shortened URL.</li>
+<li>Return<ul>
+<li><code>string</code></li>
+<li>A successful insertion returns the shortened URL; otherwise, it returns an error code.</li>
+</ul>
+</li>
+</ul>
+<h3 id="deleteurl"><a name="deleteurl" class="plugin-anchor" href="#deleteurl"><i class="fa fa-link" aria-hidden="true"></i></a><code>deleteUrl</code></h3>
+<ul>
+<li>Parameters
+Name | Type | Note
+---- | ---- | ----
+<code>api_dev_key</code> | <code>string</code> | The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
+<code>url_key</code> | <code>string</code> | Short URL.</li>
+<li>Return<ul>
+<li><code>string</code></li>
+<li>A successful deletion returns &#x2018;URL Removed&#x2019;.</li>
+</ul>
+</li>
+</ul>
+<h2 id="database-design"><a name="database-design" class="plugin-anchor" href="#database-design"><i class="fa fa-link" aria-hidden="true"></i></a>Database design</h2>
+<ul>
+<li><p>Observations</p>
+<ul>
+<li>Need to store billions of records.</li>
+<li>Each object is small (less than 1K).</li>
+<li>No relationships between records&#x2014;other than storing which user created a URL.</li>
+<li>Read-heavy.</li>
+<li>A <a href="../basics/sql-vs-nosql.html">NoSQL</a> choice would also be easier to scale.</li>
+<li>Comment: SQL with sharding should also work</li>
+</ul>
+</li>
+<li><p>Schema</p>
+<ul>
+<li>URL
+Column | Type
+---- | ----
+<code>hash</code> | varchar(16)
+<code>original_url</code> | varchar(512)
+<code>creation_date</code> | datetime
+<code>expiration_date</code> | datetime
+<code>user_id</code> | int</li>
+<li>User
+Column | Type
+---- | ----
+<code>name</code> | varchar(20)
+<code>email</code> | varchar(32)
+<code>creation_date</code> | datetime
+<code>last_login</code> | datetime</li>
+</ul>
+</li>
+</ul>
+<h2 id="basic-system-design-and-algorithm"><a name="basic-system-design-and-algorithm" class="plugin-anchor" href="#basic-system-design-and-algorithm"><i class="fa fa-link" aria-hidden="true"></i></a>Basic System Design and Algorithm</h2>
+<h3 id="encoding-actual-url"><a name="encoding-actual-url" class="plugin-anchor" href="#encoding-actual-url"><i class="fa fa-link" aria-hidden="true"></i></a>Encoding actual URL</h3>
+<ul>
+<li>Compute unique hash<ul>
+<li><code>base64</code>: A-Z, a-z, 0-9, <code>-</code>, <code>.</code></li>
+<li>6 letters: 64 ^ 6 = ~68.7 billion</li>
+<li>8 letters: 64 ^ 8 = ~281 trillion</li>
+<li>Use 6 letters</li>
+<li><code>MD5</code> generates 128 bit hash value</li>
+<li>Each <code>base64</code> character encodes 6 bits</li>
+<li><code>base64</code> encoding generates 22 characters</li>
+<li>Select 8 characters</li>
+</ul>
+</li>
+<li>Issues with this approach<ul>
+<li>Same URL from multiple users</li>
+<li>URL-encoded</li>
+</ul>
+</li>
+<li>Workaround<ul>
+<li>Append an increasing sequence number to each input URL, and generate a hash for it</li>
+<li>Append user id to input URL</li>
+</ul>
+</li>
+</ul>
+<h3 id="generating-keys-offline"><a name="generating-keys-offline" class="plugin-anchor" href="#generating-keys-offline"><i class="fa fa-link" aria-hidden="true"></i></a>Generating keys offline</h3>
+<ul>
+<li><p>Standalone Key Generation Service (KGS)</p>
+<ul>
+<li>Generate random 6 letter strings and store them in a database (key DB)</li>
+<li>When a short URL is needed, take one from the key DB</li>
+</ul>
+</li>
+<li><p>Key DB size</p>
+<ul>
+<li>6 characters/key * 68.7B unique keys = 412 GB</li>
+</ul>
+</li>
+<li><p>Concurrency issue</p>
+<ul>
+<li>If there are multiple servers reading keys concurrently, two or more servers try to read the same key from the database.</li>
+</ul>
+</li>
+<li><p>Workaround</p>
+<ul>
+<li>Servers can use KGS to read/mark keys in the database.</li>
+<li>KGS can use two tables to store keys: one for keys that are not used yet, and one for all the used keys.</li>
+<li>KGS can always keep some keys in memory so that it can quickly provide them whenever a server needs them.</li>
+<li>KGS needs to make sure not to give the same key to multiple servers.</li>
+<li>Comment: keys are sharded. Each KGS server only serves one application server.</li>
+</ul>
+</li>
+<li><p>Key lookup</p>
+<ul>
+<li>When a key is found, issue an &quot;HTTP 302 Redirect&quot; status and passing the stored URL.</li>
+<li>When a key is not found, issue an &quot;HTTP 404 Not Found&quot;, or redirect to homepage.</li>
+</ul>
+</li>
+</ul>
+<h3 id="uuid"><a name="uuid" class="plugin-anchor" href="#uuid"><i class="fa fa-link" aria-hidden="true"></i></a>UUID</h3>
+<p>Replace KGS with UUID.</p>
+<h2 id="data-partitioning-and-replication"><a name="data-partitioning-and-replication" class="plugin-anchor" href="#data-partitioning-and-replication"><i class="fa fa-link" aria-hidden="true"></i></a>Data Partitioning and Replication</h2>
+<ul>
+<li>Range Based Partitioning<ul>
+<li>Store URLs in separate partitions based on the first letter of the URL or the hash key.</li>
+<li>Combine certain less frequently occurring letters into one database partition.</li>
+</ul>
+</li>
+<li><p>Problem with this approach</p>
+<ul>
+<li>Unbalanced servers.</li>
+</ul>
+</li>
+<li><p>Hash-Based Partitioning</p>
+<ul>
+<li>Take a hash of the short URL we are storing, and calculate which partition to use based upon the hash.</li>
+<li>Use <a href="../basics/consistent-hashing.html">consistent hashing</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="cache"><a name="cache" class="plugin-anchor" href="#cache"><i class="fa fa-link" aria-hidden="true"></i></a>Cache</h2>
+<ul>
+<li>Eviction policy<ul>
+<li>LRU: discard the least recently used URL first</li>
+</ul>
+</li>
+<li>Cache update<ul>
+<li>Cache miss: hit backend database and pass new entry to all cache replicas</li>
+</ul>
+</li>
+</ul>
+<h2 id="load-balancer-lb"><a name="load-balancer-lb" class="plugin-anchor" href="#load-balancer-lb"><i class="fa fa-link" aria-hidden="true"></i></a>Load Balancer (LB)</h2>
+<ul>
+<li>LB locations<ul>
+<li>Between Clients and Application servers</li>
+<li>Between Application Servers and database servers</li>
+<li>Between Application Servers and Cache servers</li>
+</ul>
+</li>
+</ul>
+<h2 id="db-sweeping"><a name="db-sweeping" class="plugin-anchor" href="#db-sweeping"><i class="fa fa-link" aria-hidden="true"></i></a>DB Sweeping</h2>
+<p>A separate Cleanup service can run periodically to remove expired links from our storage and cache.</p>
+<h2 id="telemetry"><a name="telemetry" class="plugin-anchor" href="#telemetry"><i class="fa fa-link" aria-hidden="true"></i></a>Telemetry</h2>
+<p>Statistics about the system: how many times a short URL has been used</p>
+<h2 id="security-and-permissions"><a name="security-and-permissions" class="plugin-anchor" href="#security-and-permissions"><i class="fa fa-link" aria-hidden="true"></i></a>Security and Permissions</h2>
+<ul>
+<li>Store permission level (public/private) with each URL in the database</li>
+<li>Send an error (HTTP 401) for unauthorized access</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="pastebin.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Pastebin">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Short URL Service","level":"1.3.1","depth":2,"next":{"title":"Pastebin","level":"1.3.2","depth":2,"path":"designs/pastebin.md","ref":"designs/pastebin.md","articles":[]},"previous":{"title":"Designs","level":"1.3","depth":1,"ref":"","articles":[{"title":"Short URL Service","level":"1.3.1","depth":2,"path":"designs/short-url.md","ref":"designs/short-url.md","articles":[]},{"title":"Pastebin","level":"1.3.2","depth":2,"path":"designs/pastebin.md","ref":"designs/pastebin.md","articles":[]},{"title":"Instagram","level":"1.3.3","depth":2,"path":"designs/instagram.md","ref":"designs/instagram.md","articles":[]},{"title":"Dropbox","level":"1.3.4","depth":2,"path":"designs/dropbox.md","ref":"designs/dropbox.md","articles":[]},{"title":"Twitter","level":"1.3.5","depth":2,"path":"designs/twitter.md","ref":"designs/twitter.md","articles":[]},{"title":"Youtube","level":"1.3.6","depth":2,"path":"designs/youtube.md","ref":"designs/youtube.md","articles":[]},{"title":"Twitter Search","level":"1.3.7","depth":2,"path":"designs/twitter-search.md","ref":"designs/twitter-search.md","articles":[]},{"title":"Web Crawler","level":"1.3.8","depth":2,"path":"designs/web-crawler.md","ref":"designs/web-crawler.md","articles":[]},{"title":"Facebook Newsfeed","level":"1.3.9","depth":2,"path":"designs/facebook-newsfeed.md","ref":"designs/facebook-newsfeed.md","articles":[]},{"title":"Yelp","level":"1.3.10","depth":2,"path":"designs/yelp.md","ref":"designs/yelp.md","articles":[]},{"title":"Uber Backend","level":"1.3.11","depth":2,"path":"designs/uber-backend.md","ref":"designs/uber-backend.md","articles":[]},{"title":"Ticketmaster","level":"1.3.12","depth":2,"path":"designs/ticketmaster.md","ref":"designs/ticketmaster.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing","github","anchors","splitter"],"pluginsConfig":{"github":{"url":"https://github.com/tuliren/grokking-system-design"},"anchors":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"designs/short-url.md","mtime":"2019-01-07T06:54:40.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T06:54:54.537Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
