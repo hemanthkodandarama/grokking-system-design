@@ -1,7 +1,7 @@
 Proxies
 ====
 
-- A proxy server is an intermediary piece of hardward / software sitting between client and backend server.
+- A proxy server is an intermediary piece of hardware / software sitting between client and backend server.
   - Filter requests
   - Log requests
   - Transform requests (encryption, compression, etc)
