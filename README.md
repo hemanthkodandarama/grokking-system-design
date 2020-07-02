@@ -24,7 +24,7 @@ Source: [educative](https://www.educative.io)
 
 ## Distributed System Design Basics
 - [Key Characterics](basics/key-characteristics.md)
-- [Loading balancing](basics/load-balancing.md)
+- [Load balancing](basics/load-balancing.md)
 - [Caching](basics/caching.md)
 - [Sharding](basics/sharding.md)
 - [Indexes](basics/indexes.md)
