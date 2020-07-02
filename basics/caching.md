@@ -66,7 +66,7 @@ Caching
 
 ## Cache eviction policies
 - FIFO: first in first out
-- LIFE: last in first out
+- LIFO: last in first out
 - LRU: least recently used
 - MRU: most recently used
 - LFU: least frequently used
