@@ -48,6 +48,7 @@
 
 - Summary
   - Assuming 500 million new URLs per month and 100:1 read:write ratio
+  
   Category | Calculation | Estimate
   ---- | ---- | ----
   New URLs | 500 million / (30 days * 24 hours * 3600 seconds) | 200 /s
