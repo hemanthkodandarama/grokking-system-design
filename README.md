@@ -50,4 +50,3 @@ Source: [educative](https://www.educative.io)
 - [Uber Backend](designs/uber-backend.md)
 - [Ticketmaster](designs/ticketmaster.md)
 
-[Additional material if you read CN](https://soulmachine.gitbooks.io/system-design/content/cn/)
