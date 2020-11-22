@@ -26,7 +26,7 @@
   - Assume **100:1** ratio between read and write.
 
 - Traffic estimates
-  - **500M** new URL shortenings per month, 100 * 500M => 50B redirections per month.
+  - **500M** new URL shortenings per month, 100 * 500M => 50 GB redirections per month.
   - New URL shortenings per second
     - 500 million / (30 days * 24 hours * 3600 seconds) = **~200 URLs/s**
   - URLs redirections per second
